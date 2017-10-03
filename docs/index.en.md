@@ -1,4 +1,2 @@
-DobroSite Simple Menu
-=====================
 
 TODO
