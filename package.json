@@ -4,15 +4,18 @@
   "version": "0.0.1",
   "license": "MIT",
   "keywords": [
-    "ecosystem:jquery",
     "jquery-plugin",
     "menu"
   ],
-  "main": "lib/ds-simple-menu",
+  "author": "Михаил Красильников",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dobrosite/dobrosite-simple-menu.git"
+  },
+  "main": "lib/ds-simple-menu.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Михаил Красильников <m.krasilnikov@dobro.site>",
   "dependencies": {
     "jquery": "^3.0"
   }
