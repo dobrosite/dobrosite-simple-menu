@@ -24,13 +24,14 @@
 Обратите внимание на атрибут [aria-labelledby](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby)
 — он должен содержать идентификатор кнопки меню.
 
-Если нет возможности задать атрибут `aria-labelledby`, можно указать кнопку в настройках:
+Если нет возможности задать атрибут `aria-labelledby`, можно указать кнопку в настройках через
+параметр `toggleButton`:
 
 ```html
 <button class="nav-button">Меню</button>
 <nav class="nav-main">...</nav>
 <script>
-  $('.nav-main').dsSimpleMenu({toggleButton: $(',nav-button')})
+  $('.nav-main').dsSimpleMenu({toggleButton: $('.nav-button')})
 </script>
 ```
 
