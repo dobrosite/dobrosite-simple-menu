@@ -1,15 +1,18 @@
-# Changelog
+# История изменений
 
-All notable changes to this project will be documented in this file.
+Формат этого файла соответствует рекомендациям
+[Keep a Changelog](http://keepachangelog.com/en/1.0.0/). Проект использует
+[семантическое версионирование](http://semver.org/spec/v2.0.0.html).
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+## Не выпущено
 
-## Unreleased
+### Исправлено
+
+- Опция `disableBodyScroll` работала наоборот.
 
 
 ## 0.0.2 — 2017-10-05
 
-### Fixed
+### Исправлено
 
-- Settings where shared across all instances.
+- Настройки были общими для всех экземпляров меню
