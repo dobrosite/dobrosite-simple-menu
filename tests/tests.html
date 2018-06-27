@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>QUnit Example</title>
+    <link rel="stylesheet" href="../node_modules/qunit/qunit/qunit.css">
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture">
+    <button id="nav-main-button-1">Меню 1</button>
+    <nav class="nav-main-1" aria-labelledby="nav-main-button-1">
+        <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+            <li>Пункт 3</li>
+        </ul>
+    </nav>
+    <button id="nav-main-button-2">Меню 2</button>
+    <nav class="nav-main-2" aria-labelledby="nav-main-button-2">
+        <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+            <li>Пункт 3</li>
+        </ul>
+    </nav>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../lib/ds-simple-menu.js"></script>
+</div>
+<script src="../node_modules/qunit/qunit/qunit.js"></script>
+<script src="tests.js"></script>
+</body>
+</html>

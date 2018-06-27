@@ -18,5 +18,8 @@
   },
   "dependencies": {
     "jquery": "^3.0"
+  },
+  "devDependencies": {
+    "qunit": "^2.6.1"
   }
 }
