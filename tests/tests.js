@@ -93,7 +93,7 @@ QUnit.test('При показе меню, другие меню должны с�
 
 QUnit.module('API')
 
-QUnit.test('При вызове метода .open() меню показывается', function (assert) {
+QUnit.test('При вызове метода "open" меню показывается', function (assert) {
   var $fixture = $('#qunit-fixture')
   var $menu = $('.nav-main-1', $fixture)
 
@@ -107,7 +107,7 @@ QUnit.test('При вызове метода .open() меню показывае
   )
 })
 
-QUnit.test('При вызове метода .close() меню скрывается', function (assert) {
+QUnit.test('При вызове метода "close" меню скрывается', function (assert) {
   var $fixture = $('#qunit-fixture')
   var $menu = $('.nav-main-1', $fixture)
   var $button = $('#nav-main-button-1', $fixture)
@@ -130,7 +130,7 @@ QUnit.test('При вызове метода .close() меню скрывает�
   )
 })
 
-QUnit.test('При вызове метода .toggle() видимость меню должна переключаться', function (assert) {
+QUnit.test('При вызове метода "toggle" видимость меню должна переключаться', function (assert) {
   var $fixture = $('#qunit-fixture')
   var $menu = $('.nav-main-1', $fixture)
 
@@ -151,4 +151,45 @@ QUnit.test('При вызове метода .toggle() видимость мен
     'true',
     'После второго вызова .toggle() меню должно быть скрыто.'
   )
+})
+
+QUnit.module('События')
+
+QUnit.test('При вызове метода "open" вызывается обработчик "onOpen"', function (assert) {
+  var $fixture = $('#qunit-fixture')
+  var $menu = $('.nav-main-1', $fixture)
+
+  assert.expect(2)
+
+  $menu.dsSimpleMenu({
+    'onOpen': function ($sender) {
+      assert.ok($sender instanceof jQuery, 'В обработчик должен передаваться объект jQuery.')
+      assert.ok(
+        $sender.hasClass('nav-main-1'),
+        'Переданный объект jQuery должен совпадать с объектом меню.'
+      )
+    }
+  })
+
+  $menu.dsSimpleMenu('open')
+})
+
+QUnit.test('При вызове метода "close" вызывается обработчик "onClose"', function (assert) {
+  var $fixture = $('#qunit-fixture')
+  var $menu = $('.nav-main-1', $fixture)
+
+  assert.expect(2)
+
+  $menu.dsSimpleMenu({
+    'onClose': function ($sender) {
+      assert.ok($sender instanceof jQuery, 'В обработчик должен передаваться объект jQuery.')
+      assert.ok(
+        $sender.hasClass('nav-main-1'),
+        'Переданный объект jQuery должен совпадать с объектом меню.'
+      )
+    }
+  })
+
+  $menu.dsSimpleMenu('open')
+  $menu.dsSimpleMenu('close')
 })
